@@ -1,5 +1,10 @@
 import Expenses from "./components/Expenses/Expenses";
 
+import NewExpense from "./components/NewExpense/NewExpense";
+
+const secret = () => {
+  alert("you found the secret, so I´ll disapper and you will never find me");
+};
 const App = () => {
   const expenses = [
     {
@@ -23,12 +28,17 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("uwu");
+  };
+
   return (
     <div>
-      <h1>Evil Unicorn</h1>
+      <h1 onClick={secret}>Evil Unicorn</h1>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
