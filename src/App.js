@@ -26,7 +26,7 @@ const initExpenses = [
 ];
 
 const secret = () => {
-  alert("you found the secret, so I´ll disapper and you will never find me");
+  alert("you found the secret, so I'll disapper and you will never find me");
 };
 const App = () => {
   const [expenses, setExpenses] = useState(initExpenses);
@@ -34,7 +34,7 @@ const App = () => {
   const addExpenseHandler = (expense) => {
     console.log("uwu");
     setExpenses(prevExpenses=>{
-      return [expense, ...prevExpenses];
+      return [expense,...prevExpenses];
     });
   };
 
